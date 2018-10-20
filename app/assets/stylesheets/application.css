@@ -38,7 +38,156 @@ footer {
 }
 .cover .cover-inner .cover-contents h1 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: #3c9;
   font-weight: bold;
   letter-spacing: 0.15em;
+}
+/* search */
+.search {
+  margin-bottom: 20px;
+}
+
+/* item */
+.item .panel-body {
+  height: 100px;
+}
+.item .panel-heading {
+  height: 50px;
+}
+.item .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+p.item-title {
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.item .buttons form {
+  display: inline-block;
+  margin: auto;
+}
+
+/* users */
+.user-profile .name {
+  margin-bottom: 20px;
+}
+.user-profile .name h1 {
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
+}
+.user-profile .status ul {
+  margin: 0 auto 10px;
+  padding: 0;
+  display: table;
+}
+.user-profile .status ul li {
+  width: 120px;
+  padding: 5px 0;
+  border-right: 1px solid #ddd;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #777;
+}
+.user-profile .status ul li:last-child {
+  border: none;
+}
+.user-profile .status ul li .status-label {
+  font-size: 12px;
+}
+.user-profile .status ul li .status-value {
+  font-size: 18px;
+}
+
+/* wantfollows */
+.wantfollow-profile .follow-status {
+  float: left;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  width: 49%;
+  height: 100%;
+}
+.wantfollow-profile .want-status:before {
+  position: absolute;
+  content: "";
+  background: #ddd;
+  width: 1px;
+  height: 150px;
+  left: 50%;
+}
+.wantfollow-profile .want-status {
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  width: 49%;
+  height: 100%;
+}
+
+/* myitem */
+.myitem .panel-body {
+  height: 50px;
+}
+.myitem .panel-heading {
+  height: 50px;
+}
+.myitem .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+p.myitem-title {
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* community */
+.community {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+}
+.community .community-inner {
+  height: 100%;
+  margin: auto;
+  display: table;
+}
+.community .community-inner .community-contents {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+}
+.community .community-inner .community-contents h1 {
+  margin: 0 0 20px 0;
+  color: #3c9;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+}
+.community-new {
+  vertical-align: middle;
+  text-align: center;
+  height: 50px;
+}
+.community-list .detail {
+  padding: 0em 2em;
+  border-bottom: 1px solid #ddd;
+}
+.community-detail {
+  margin: 0 0 20px 0;
+  letter-spacing: 0.15em;
+  text-align: center;
+  padding: 0em 2em;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-profile .follow {
+    margin: 0px auto;
+    width: 100px;
 }

@@ -1,0 +1,29 @@
+<% if items.present? %>
+  <div class="row">
+    <% items.each do |item| %>
+      <div class="item">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <p class="item-title"><%= link_to item.name, item %></p>
+            </div>
+            <div class="panel-body text-center">
+              <% if logged_in? %>
+                <% unless current_user == item.user %>
+                  <p class="user-name"><%= link_to item.user.name, user_path(item.user) %></p>
+                  <div class="buttons text-center">
+                      <%= render 'ownerships/want_button', item: item %>
+                  </div>
+                <% else %>
+                  <p class="user-name"><%= link_to item.user.name, mypage_path(item.user) %></p>
+                <% end %>
+              <% else %>
+                <p class="user-name"><%= link_to item.user.name, user_path(item.user) %></p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="community">
+      <div class="community-inner">
+        <div class="community-contents">
+          <h1><%= @community.name %></h1>
+        </div>
+      </div>
+    </div>
+    <div class="community-detail">
+      <%= @community.detail %>
+    </div>
+
+  </div>
+
+    <aside class="col-md-4">
+      <%= form_for(@micropost) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :content, class: 'form-control', rows: 5 %>
+        </div>
+        <%= hidden_field_tag :community_id, @community.id %>
+        <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+      <% end %>
+    </aside>
+    <div class="col-xs-8">
+      <%= render 'microposts/microposts', microposts: @microposts %>
+    </div>
+</div>

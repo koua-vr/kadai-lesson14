@@ -5,8 +5,5 @@
   <div class="name text-center">
     <h1><%= @user.name %></h1>
   </div>
-  <div class="follow">
-    <%= render 'relationships/follow_button', user: @user %>
-  </div>
 </div>
-<%= render 'items/items', items: @items %>
+<%= render 'items/myitems', items: @items %>

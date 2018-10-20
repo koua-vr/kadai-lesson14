@@ -1,0 +1,18 @@
+<% if items.present? %>
+  <div class="row">
+    <% items.each do |item| %>
+      <div class="myitem">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <p class="myitem-title"><%= link_to item.name, item %></p>
+            </div>
+            <div class="panel-body text-center">
+              <p class="user-name"><%= link_to item.user.name, user_path(item.user) %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>

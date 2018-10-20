@@ -1,0 +1,10 @@
+<% if communities.present? %>
+  <div class="row">
+    <% communities.each do |community| %>
+      <div class="community-list">
+        <p class="name"><%= link_to community.name, micropost_path(community.id) %></p>
+        <p class="detail"><%= community.detail %></p>
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="community">
+      <div class="community-inner">
+        <div class="community-contents">
+          <h1>Community</h1>
+        </div>
+      </div>
+    </div>
+    
+    <div class="community-new text-center">
+      <%= link_to new_community_path do %>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+          New Community Regist
+      <% end %>
+    </div>
+
+    <%= render 'communities/communities', communities: @communities %>
+    
+  </div>
+</div>
