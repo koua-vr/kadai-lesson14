@@ -1,6 +1,5 @@
 class CommunitiesController < ApplicationController
-  def show
-    @user = User.find(params[:id])
+  def index
     @communities = Community.all
   end
 
@@ -13,7 +12,7 @@ class CommunitiesController < ApplicationController
 
     if @community.save
       flash[:success] = 'コミュニティを登録しました。'
-      redirect_to @community
+      redirect_to communities_path
     else
       flash.now[:danger] = 'コミュニティの登録に失敗しました。'
       render :new

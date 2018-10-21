@@ -21,7 +21,7 @@
             </li>
             
             <li>
-              <%= link_to 'Community', community_path(current_user) %>
+              <%= link_to 'Community', communities_path %>
             </li>
 
             <li class="dropdown">
@@ -34,10 +34,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li>
-                  <%= link_to 'My Page', mypage_path(current_user) %>
+                  <%= link_to 'My Page', mypages_path %>
                 </li>
                 <li>
-                  <%= link_to 'My Item', myitem_path(current_user) %>
+                  <%= link_to 'My Item', myitems_path %>
                 </li>
                 <li>
                   <%= link_to 'Item Register', registitem_path(current_user) %>

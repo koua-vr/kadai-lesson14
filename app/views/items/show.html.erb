@@ -11,6 +11,9 @@
             <% if logged_in? %>
               <% unless current_user == @user %>
                 <%= render 'ownerships/want_button', item: @item %>
+              <% else %>
+                <%= link_to "Edit", edit_item_path(@item), class: 'btn btn-default btn-xs' %>
+                <%= link_to "Delete", @item, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
               <% end %>
             <% end %>
           </div>

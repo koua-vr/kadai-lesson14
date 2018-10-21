@@ -1,8 +1,8 @@
 class MypagesController < ApplicationController
-  before_action :require_user_logged_in, only: [:show]
+  before_action :require_user_logged_in, only: [:index]
   
-  def show
-    @user = User.find(params[:id])
+  def index
+    @user = current_user
     @items = @user.want_items
     @count_want = @user.want_items.count
     @followings = @user.followings

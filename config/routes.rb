@@ -12,17 +12,17 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :items, only: [:show, :new]
+  resources :items, only: [:show, :new, :edit, :update, :destroy]
   resources :ownerships, only: [:create, :destroy]
   
-  resources :mypages, only: [:show, :new, :create]
+  resources :mypages, only: [:index, :new, :create]
 
   get 'registitem', to: 'mypages#new'
   post 'registitem', to: 'mypages#create'
   
-  resources :myitems, only: [:show]
+  resources :myitems, only: [:index]
 
   resources :microposts, only: [:show, :create, :destroy]
-  resources :communities, only: [:show, :new, :create]
+  resources :communities, only: [:index, :new, :create]
   resources :relationships, only: [:create, :destroy]
 end

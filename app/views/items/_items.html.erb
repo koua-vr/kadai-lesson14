@@ -15,7 +15,7 @@
                       <%= render 'ownerships/want_button', item: item %>
                   </div>
                 <% else %>
-                  <p class="user-name"><%= link_to item.user.name, mypage_path(item.user) %></p>
+                  <p class="user-name"><%= link_to item.user.name, mypages_path %></p>
                 <% end %>
               <% else %>
                 <p class="user-name"><%= link_to item.user.name, user_path(item.user) %></p>
