@@ -1,6 +1,14 @@
 class CommunitiesController < ApplicationController
+  before_action :require_user_logged_in, only: [:show]
+
   def index
     @communities = Community.all
+  end
+
+  def show
+    @community = Community.find(params[:id])
+    @micropost = current_user.microposts.build
+    @microposts = @community.microposts.order('created_at DESC')
   end
 
   def new

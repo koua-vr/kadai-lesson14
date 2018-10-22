@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   
   resources :myitems, only: [:index]
 
-  resources :microposts, only: [:show, :create, :destroy]
-  resources :communities, only: [:index, :new, :create]
+  resources :microposts, only: [:create, :destroy]
+  resources :communities, only: [:index, :show, :new, :create]
   resources :relationships, only: [:create, :destroy]
 end
